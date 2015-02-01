@@ -2,7 +2,7 @@
     <header class="post-header">
         <h1 class="post-title">{{title}}</h1>
         <p class="post-date">
-            by {{author}} &nbsp;  
+            by {{author}} &nbsp;
             <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
                 {{date format="MMM DD, YYYY"}}
             </time>
@@ -15,8 +15,10 @@
     </div>
 
     <footer class="post-footer clearfix">
-        {{#if tags}}
-            <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
-        {{/if}}
+        <div class="social-shares" data-url="{{@blog.url}}{{url}}" data-text="{{title}}"></div>
+        <section class="comment">
+            <div class="g-comments" style="width: 800px;" data-href="{{@blog.url}}{{url}}" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>
+            <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
+        </section>
     </footer>
 </article>

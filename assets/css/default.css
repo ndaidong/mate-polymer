@@ -141,6 +141,34 @@
         max-width: 800px;
     }
 
+    .post-footer{
+        margin: 10px 0px;
+        border-top: solid 1px #ccc;
+    }
+    .social-shares {
+        flex-grow: 1;
+        align-self: stretch;
+        text-align: center;
+        background-color: #eee;
+        padding: 10px 0px;
+        margin-bottom: 20px;
+    }
+        .social-shares.float-right{
+            display: inline-block;
+            float: right;
+        }
+        .social-shares a.social-icon{
+            display: inline-block;
+            font-size: 28px;
+            color: #333;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 300ms;
+        }
+        .social-shares a.social-icon:hover{
+            color: #000;
+        }
+
     pre {
         margin: 5px 0px;
         border: 4px inset #ccc;

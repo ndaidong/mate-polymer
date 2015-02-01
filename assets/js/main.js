@@ -24,6 +24,8 @@
         Bella.dom.all('pre code').forEach(function(el){
             hljs.highlightBlock(el);
         });
+
+        Bella.ssharer.handle();
     }
 
     var modules = [], libs = [];
