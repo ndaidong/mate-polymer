@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{{meta_description}}">
+    <meta name="homepage" content="{{@blog.url}}{{url}}">
+    <meta name="author" content="{{author.name}}">
+    <meta itemprop="name" content="{{meta_title}}">
+    <meta itemprop="description" content="{{meta_description}}">
+    <meta itemprop="image" content="{{@blog.url}}{{@blog.cover}}">
+
+    <!-- OpenGraph metadata -->
+    <meta property="og:site_name" content="{{name}}">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:url" content="{{@blog.url}}{{url}}">
+    <meta property="og:creator" content="{{author.name}}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{{@blog.url}}{{@blog.cover}}">
+    <meta property="og:description" content="{{meta_description}}">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{name}}">
+    <meta name="twitter:creator" content="{{author.name}}">
+    <meta name="twitter:url" content="{{@blog.url}}{{url}}">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+    <meta name="twitter:image" content="{{@blog.url}}{{@blog.cover}}">
+    <meta name="twitter:image:src" content="{{@blog.url}}{{@blog.cover}}">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>{{meta_title}}</title>
+    <link rel="icon" href="/favicon.ico" sizes="16x16">
+    <link rel="shortcut icon" href="{{asset "brand/icon-16.png"}}" type="image/x-icon">
+    <link rel="canonical" href="{{canonical}}">
+    <link rel="alternate" type="application/rss+xml" href="{{@blog.url}}/rss" title="{{name}} - RSS">
+
+    <script type="text/javascript" src="{{asset "components/webcomponentsjs/webcomponents-lite.min.js"}}"></script>
+    <link rel="import" href="{{asset "components/core-header-panel/core-header-panel.html"}}">
+    <link rel="import" href="{{asset "components/core-toolbar/core-toolbar.html"}}">
+    <link rel="import" href="{{asset "components/core-icon-button/core-icon-button.html"}}">
+    <link rel="import" href="{{asset "components/paper-icon-button/paper-icon-button.html"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/fonts.css"}}">
+    <style shim-shadowdom>
+        core-toolbar{
+            background-image: url({{@blog.cover}});
+        }
+    </style>
+  </head>
+  <body unresolved>
+      <core-header-panel mode="waterfall-tall" tallClass="tall">
+          <core-toolbar>
+              <a flex class="site-logo" title="{{@blog.title}}" href="{{@blog.url}}" style="background-image: url({{@blog.logo}});">
+                  {{@blog.title}}
+              </a>
+              <a href="{{@blog.url}}/rss" target="_blank">
+                  <paper-icon-button src="{{asset "images/icons/rss.png"}}" title="Subscribe"></paper-icon-button>
+              </a>
+          </core-toolbar>
+          <div class="outer" fit>
+              {{{body}}}
+
+                <p class="footer-copyright">
+                  Based on
+                  <a href="http://tryghost.org">Ghost Platform</a> /
+                  <a href="https://github.com/techpush/mate-polymer">Mate Polymer theme</a>
+                  by <a href="https://github.com/ndaidong">@ndaidong</a>
+                </p>
+          </div>
+
+
+      </core-header-panel>
+
+      <script type="text/javascript" ping="{{asset "js/main"}}" src="{{asset "js/libs/bella.js"}}"></script>
+  </body>
+</html>

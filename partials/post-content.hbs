@@ -1,0 +1,22 @@
+<article class="post-container {{post_class}}">
+    <header class="post-header">
+        <h1 class="post-title">{{title}}</h1>
+        <p class="post-date">
+            by {{author}} &nbsp;  
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+                {{date format="MMM DD, YYYY"}}
+            </time>
+            {{tags prefix=" on "}}
+        </p>
+    </header>
+
+    <div class="post-content clearfix">
+        {{{content}}}
+    </div>
+
+    <footer class="post-footer clearfix">
+        {{#if tags}}
+            <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
+        {{/if}}
+    </footer>
+</article>

@@ -1,0 +1,39 @@
+<template is="auto-binding">
+	<core-scroll-threshold id="threshold" scrollTarget="{{$.scroller}}" lowerThreshold="120" on-lower-trigger="{{loadMore}}" fit></core-scroll-threshold>
+	<div id="scroller" fit flex horizontal center-justified layout wrap>
+		<template repeat="{{item in data}}">
+            <div class="link-item tweet people" guid="{{item.id}}">
+                <div class="people">
+                    <template repeat="{{people in item.sharers}}">
+                        <a class="people-item" related="{{people.twid}}">
+                            <template if="{{people.isRetweet}}">
+                                <span class="retweet-outer"><span class="retweet"></span></span>
+                            </template>
+                            <span class="people-avatar" style="background-image: url({{people.tweetBy.avatar}});"></span>
+                            <div class="tweet-embed"></div>
+                        </a>
+                    </template>
+                </div>
+                <div class="header" rel-twid="{{item.id}}">
+                    <a href="/read/{{item.id}}" rel-twid="{{item.id}}" class="link-title">{{item.title}}</a>
+                    <div class="headline" rel-twid="{{item.id}}">
+                        <img src="{{item.favicon}}" class="favicon" rel-twid="{{item.id}}">
+                        <template if="{{item.author}}">
+                            <span class="source" title="{{item.source}}" rel-twid="{{item.id}}">{{item.source}}</span>
+                            <span class="small-dot"></span><span class="author" title="{{item.author}}" rel-twid="{{item.id}}">{{item.author}}</span>
+                        </template>
+                        <template if="{{!item.author}}">
+                            <span class="source" title="{{item.source}}" style="max-width: 210px;" rel-twid="{{item.id}}">{{item.source}}</span>
+                        </template>
+                    </div>
+                </div>
+                <div class="background" rel-twid="{{item.id}}" style="background-image: url({{item.image}});"></div>
+            </div>
+            
+		</template>
+		<div hidden?="{{!$.threshold.lowerTriggered}}" class="loading-section">
+			<img src="/public/images/gif/retrieving.gif">
+		</div>
+	</div> 
+</template>
+

@@ -1,0 +1,9 @@
+{
+    "name": "Mate Polymer",
+    "version": "0.1.1",
+    "author": "@ndaidong",
+    "repository"  : {
+        "type": "git",
+        "url": "git@github.com:techpush/mate-polymer.git"
+    }
+}

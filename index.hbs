@@ -1,0 +1,20 @@
+{{!< default}}
+
+<div id="post-index" class="container">
+    <div class="post-list">
+        {{#foreach posts}}
+            <div class="post-entry {{post_class}}" >
+                <a class="post-title" href="{{url}}">{{title}}</a>
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+                    {{author}} posted on {{date format="MMMM DD, YYYY"}}
+                </time>
+                <div class="post-description">
+                    {{excerpt}}... <a class="read-more" href="{{url}}">Read more &raquo;</a>
+                </div>
+            </div>
+        {{/foreach}}
+    </div>
+    <div class="post-navigation">
+        {{pagination}}
+    </div>
+</div>

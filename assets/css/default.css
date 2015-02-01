@@ -1,0 +1,160 @@
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: "Droid Serif", serif;
+    }
+    core-header-panel {
+        height: 100%;
+    }
+    core-toolbar{
+        background: #03A9F4 url(/assets/images/gif/transparent.gif) no-repeat center center;
+        background-size: cover;
+    }
+
+    core-toolbar a.site-logo {
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        color: #fff;
+        display: inline-block;
+        background: transparent url(/assets/images/gif/transparent.gif) no-repeat center left;
+        background-size: contain;
+        text-decoration: none;
+        text-indent: 60px;
+        font-size: 36px;
+        margin-top: 0px;
+        transition: all 0.2s;
+        text-shadow: 2px 3px 8px #000;
+    }
+
+    core-toolbar.tall a.site-logo{
+        text-indent: 90px;
+        font-size: 60px;
+        margin-top: 224px;
+    }
+
+
+
+    .outer {
+        padding: 0px;
+    }
+    .outer .container{
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        padding: 40px 0px 30px;
+        min-height: 600px;
+    }
+
+    .outer .container a{
+        transition: all 300ms;
+        text-decoration: none;
+        color: #99f;
+    }
+    .outer .container a:hover{
+        color: #263238;
+    }
+
+    .footer-copyright{
+        display: block;
+        padding: 30px 0px 40px;
+        background-color: #D7CCC8;
+        text-align: center;
+    }
+        .footer-copyright a{
+            text-decoration: none;
+            color: #006;
+        }
+        .footer-copyright a:hover{
+            text-decoration: none;
+            color: #66e;
+        }
+
+    .post-list{
+        margin: 0px 0px 30px;
+    }
+        .post-list .post-entry{
+            padding: 10px 0px;
+        }
+            .post-list .post-entry a.post-title{
+                display: block;
+                font-family: "Droid Serif Bold";
+                font-size: 28px;
+                text-decoration: none;
+                color: #424242;
+                transition: all 300ms;
+                line-height: 32px;
+            }
+            .post-list .post-entry a.post-title:hover{
+                color: #000;
+            }
+
+            .post-list .post-entry time.post-date{
+                color: #999;
+                margin: 12px 0px 0px;
+                display: block;
+                font-family: "Droid Serif Italic";
+            }
+                .post-list .post-entry time.post-date a{
+                    color: #99f;
+                    text-decoration: none;
+                    transition: all 300ms;
+                }
+                .post-list .post-entry time.post-date a:hover{
+                    color: #263238;
+                }
+
+            .post-list .post-entry .post-description{
+                margin: 12px auto;
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 0.2px;
+                text-align: justify;
+                color: #666;
+            }
+
+
+
+    article.post-container{
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+    }
+        article.post-container header.post-header{
+
+        }
+        article.post-container header.post-header h1.post-title{
+            font-family: "Droid Serif Bold";
+            font-size: 32px;
+        }
+        article.post-container header.post-header .post-date{
+            font-size: 16px;
+            font-family: "Droid Serif Italic";
+            color: #666;
+        }
+
+        article.post-container .post-content{
+            padding: 5px 0px;
+        }
+
+    article.post-container img{
+        max-width: 800px;
+    }
+
+    pre {
+        margin: 5px 0px;
+        border: 4px inset #ccc;
+        padding: 10px 0px 10px 15px;
+        background: #f8f8f8;
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        max-width: 780px;
+        min-height: 20px;
+        max-height: 400px;
+        overflow: auto;
+    }
+
+    .hljs{display:block;overflow-x:auto;padding:0.5em;-webkit-text-size-adjust:none}.hljs,.hljs-subst,.hljs-tag .hljs-title,.nginx .hljs-title{color:black}.hljs-string,.hljs-title,.hljs-constant,.hljs-parent,.hljs-tag .hljs-value,.hljs-rules .hljs-value,.hljs-preprocessor,.hljs-pragma,.haml .hljs-symbol,.ruby .hljs-symbol,.ruby .hljs-symbol .hljs-string,.hljs-template_tag,.django .hljs-variable,.smalltalk .hljs-class,.hljs-addition,.hljs-flow,.hljs-stream,.bash .hljs-variable,.apache .hljs-tag,.apache .hljs-cbracket,.tex .hljs-command,.tex .hljs-special,.erlang_repl .hljs-function_or_atom,.asciidoc .hljs-header,.markdown .hljs-header,.coffeescript .hljs-attribute{color:#800}.smartquote,.hljs-comment,.hljs-annotation,.diff .hljs-header,.hljs-chunk,.asciidoc .hljs-blockquote,.markdown .hljs-blockquote{color:#888}.hljs-number,.hljs-date,.hljs-regexp,.hljs-literal,.hljs-hexcolor,.smalltalk .hljs-symbol,.smalltalk .hljs-char,.go .hljs-constant,.hljs-change,.lasso .hljs-variable,.makefile .hljs-variable,.asciidoc .hljs-bullet,.markdown .hljs-bullet,.asciidoc .hljs-link_url,.markdown .hljs-link_url{color:#080}.hljs-label,.hljs-javadoc,.ruby .hljs-string,.hljs-decorator,.hljs-filter .hljs-argument,.hljs-localvars,.hljs-array,.hljs-attr_selector,.hljs-important,.hljs-pseudo,.hljs-pi,.haml .hljs-bullet,.hljs-doctype,.hljs-deletion,.hljs-envvar,.hljs-shebang,.apache .hljs-sqbracket,.nginx .hljs-built_in,.tex .hljs-formula,.erlang_repl .hljs-reserved,.hljs-prompt,.asciidoc .hljs-link_label,.markdown .hljs-link_label,.vhdl .hljs-attribute,.clojure .hljs-attribute,.asciidoc .hljs-attribute,.lasso .hljs-attribute,.coffeescript .hljs-property,.hljs-phony{color:#88f}.hljs-keyword,.hljs-id,.hljs-title,.hljs-built_in,.css .hljs-tag,.hljs-javadoctag,.hljs-phpdoc,.hljs-dartdoc,.hljs-yardoctag,.smalltalk .hljs-class,.hljs-winutils,.bash .hljs-variable,.apache .hljs-tag,.hljs-type,.hljs-typename,.tex .hljs-command,.asciidoc .hljs-strong,.markdown .hljs-strong,.hljs-request,.hljs-status{font-weight:bold}.asciidoc .hljs-emphasis,.markdown .hljs-emphasis{font-style:italic}.nginx .hljs-built_in{font-weight:normal}.coffeescript .javascript,.javascript .xml,.lasso .markup,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:0.5}
